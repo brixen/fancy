@@ -106,7 +106,7 @@ class Fancy
       end
     end
 
-    class MethodArgs < Rubinius::AST::FormalArguments
+    class MethodArgs < Rubinius::AST::Parameters
       def initialize(line, *args)
         super(line, args.map(&:to_sym), nil, nil)
       end
