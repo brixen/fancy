@@ -34,6 +34,10 @@ parse_file(VALUE self) {
   return self;
 }
 
+int yywrap() {
+  return 0;
+}
+
 void
 Init_fancy_parser() {
   VALUE ext = rb_funcall(rb_cModule, rb_intern("new"), 0);
