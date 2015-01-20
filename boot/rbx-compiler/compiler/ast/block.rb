@@ -87,6 +87,14 @@ class Fancy
         total_args
       end
 
+      def required_args=(value)
+        warn "#{self.class.name}\##{__method__}: undefined"
+      end
+
+      def prelude=(value)
+        warn "#{self.class.name}\##{__method__}: undefined"
+      end
+
       def create_locals(block)
         @args.each do |a|
           block.new_local(a)
